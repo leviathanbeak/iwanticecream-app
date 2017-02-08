@@ -1,0 +1,35 @@
+<!-- /app/pages/chat-view/chat-view.html --> 
+<ion-header> 
+  <ion-navbar primary> 
+    <ion-title>Chat</ion-title>
+  </ion-navbar> 
+</ion-header> 
+ 
+<ion-content padding class="chat-view" id="chat-view">   
+  <div class="messages"> 
+      <div class="message" *ngFor="let chat of chats" 
+       [ngClass]="{'me': 'me' === chat.from}"> 
+            <span *ngIf="chat.message">{{chat.message}}</span>            
+      </div> 
+  </div> 
+</ion-content> 
+ 
+<ion-footer> 
+  <ion-toolbar> 
+    <ion-row>
+      <ion-col width-70 > 
+          <ion-input type="text"  placeholder="Enter Message" 
+              [(ngModel)]="message"> 
+          </ion-input> 
+      </ion-col> 
+      <ion-col width-20 > 
+          <button full (click)="sendMessage(message)"><ion-icon name="send">
+           </ion-icon></button>           
+      </ion-col>
+      <ion-col width-20 >           
+           <button full (click)="speechToText()" [disabled]="isRecongizing"><ion-icon name="mic">
+           </ion-icon></button> 
+      </ion-col> 
+    </ion-row>     
+  </ion-toolbar> 
+</ion-footer> 
