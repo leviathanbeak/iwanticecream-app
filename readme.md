@@ -8,7 +8,7 @@ simple messaging app, that connects to Api.AI and [NodeJS Server](https://github
 ```sh
 $ npm install -g cordova (if not already installed)
 $ npm install -g ionic (if not already installed)
-$ git clone repo
+$ git clone https://github.com/leviathan88/iwanticecream-app.git
 $ cd iwanticecream-app
 $ npm install
 $ ionic serve (in order for ionic to create /www folder, then just ctrl+c to end it)
